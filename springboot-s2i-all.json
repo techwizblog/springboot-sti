@@ -33,7 +33,7 @@
             "source": {
                "type": "Git",
                "git": {
-                  "uri": "https://github.com/techwizblog/springboot-s2i.git",
+                  "uri": "https://github.com/techwizblog/springboot-sti.git",
                   "ref": "master"
                }
             },
