@@ -42,7 +42,7 @@
                "dockerStrategy": {
                   "from": {
                      "kind": "ImageStreamTag",
-                     "name": "centos:7"
+                     "name": "openshift/centos:7"
                   }
                }
             },
@@ -62,7 +62,7 @@
             "name": "centos"
          },
          "spec": {
-            "dockerImageRepository": "library/centos:7"
+            "dockerImageRepository": "openshift/centos:7"
          }
       },
       {
