@@ -62,7 +62,7 @@
             "name": "rhel"
          },
          "spec": {
-            "dockerImageRepository": "openshift/rhel"
+            "dockerImageRepository": "registry.access.redhat.com/openshift3/rhel"
          }
       },
       {
