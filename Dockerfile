@@ -6,12 +6,12 @@ MAINTAINER Jorge Morales <jmorales@redhat.com>
 # Java jdk 8, Maven 3.3, Gradle 2.6
 ENV GRADLE_VERSION 2.6
 ENV MAVEN_VERSION 3.3.3
-ENV HTTP_PROXY $HTTP_PROXY_VALUE
-ENV HTTPS_PROXY $HTTPS_PROXY_VALUE
-RUN echo $HTTP_PROXY
-RUN echo $HTTPS_PROXY
-RUN export http_proxy=$HTTP_PROXY
-RUN export https_proxy=$HTTPS_PROXY
+ENV http_proxy $HTTP_PROXY_VALUE
+ENV https_proxy $HTTPS_PROXY_VALUE
+RUN echo $http_proxy
+RUN echo $https_proxy
+RUN export http_proxy=$HTTP_PROXY_VALUE
+RUN export https_proxy=$HTTPS_PROXY_VALUE
 
 RUN yum repolist
 RUN yum install -y \
