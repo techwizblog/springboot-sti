@@ -1,5 +1,5 @@
 # springboot-sti
-FROM registry.access.redhat.com/openshift3/rhel
+FROM registry.access.redhat.com/rhel
 MAINTAINER Jorge Morales <jmorales@redhat.com>
 
 # Install build tools on top of base image
