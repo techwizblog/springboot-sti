@@ -6,6 +6,11 @@ MAINTAINER Jorge Morales <jmorales@redhat.com>
 # Java jdk 8, Maven 3.3, Gradle 2.6
 ENV GRADLE_VERSION 2.6
 ENV MAVEN_VERSION 3.3.3
+ENV HTTP_PROXY $HTTP_PROXY_VALUE
+ENV HTTPS_PROXY $HTTPS_PROXY_VALUE
+RUN echo $HTTP_PROXY
+RUN echo $HTTPS_PROXY
+
 RUN yum repolist
 RUN yum install -y \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
