@@ -16,7 +16,7 @@ RUN yum install -y \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
     yum clean all -y && \
     (curl -0 https://github.com/techwizblog/springboot-sti/blob/master/apache-maven-3.3.3-bin.tar.gz?raw=true | \
-    tar -xvzf -C /usr/local) && \
+    tar -xvz -C /usr/local) && \
     mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
     ln -sf /usr/local/maven/bin/mvn /usr/local/bin/mvn && \
     #curl -sL -0 https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -o /tmp/gradle-${GRADLE_VERSION}-bin.zip && \
