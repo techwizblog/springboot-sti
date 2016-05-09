@@ -42,7 +42,7 @@
                "dockerStrategy": {
                   "from": {
                      "kind": "ImageStreamTag",
-                     "name": "rhel:latest"
+                     "name": "registry.access.redhat.com/rhel:latest"
                   }
                }
             },
