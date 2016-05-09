@@ -42,7 +42,7 @@
                "dockerStrategy": {
                   "from": {
                      "kind": "ImageStreamTag",
-                     "name": "registry.access.redhat.com/rhel:latest"
+                     "name": "registry.access.redhat.com/rhel:7.2"
                   }
                }
             },
@@ -59,10 +59,10 @@
          "kind": "ImageStream",
          "apiVersion": "v1",
          "metadata": {
-            "name": "rhel:latest"
+            "name": "rhel:7.2"
          },
          "spec": {
-            "dockerImageRepository": "registry.access.redhat.com/rhel"
+            "dockerImageRepository": "registry.access.redhat.com/rhel:7.2"
          }
       },
       {
