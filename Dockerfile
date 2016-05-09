@@ -17,7 +17,7 @@ RUN yum repolist
 RUN yum install -y \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
     yum clean all -y && \
-    (curl --proxy $http_proxy -0 http://github.com/techwizblog/springboot-sti/blob/master/apache-maven-3.3.3-bin.tar.gz?raw=true | \
+    (curl -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
     tar -xvz -C /usr/local) && \
     mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
     ln -sf /usr/local/maven/bin/mvn /usr/local/bin/mvn && \
