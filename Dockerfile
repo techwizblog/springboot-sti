@@ -15,21 +15,22 @@ RUN yum repolist
 RUN yum install -y \
     tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
     yum clean all -y && \
-    (curl -0 http://www.eu.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | \
+    (curl -0 https://github.com/techwizblog/springboot-sti/blob/master/apache-maven-3.3.3-bin.tar.gz?raw=true | \
     tar -zx -C /usr/local) && \
     mv /usr/local/apache-maven-$MAVEN_VERSION /usr/local/maven && \
     ln -sf /usr/local/maven/bin/mvn /usr/local/bin/mvn && \
-    curl -sL -0 https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -o /tmp/gradle-${GRADLE_VERSION}-bin.zip && \
-    unzip /tmp/gradle-${GRADLE_VERSION}-bin.zip -d /usr/local/ && \
-    rm /tmp/gradle-${GRADLE_VERSION}-bin.zip && \
-    mv /usr/local/gradle-${GRADLE_VERSION} /usr/local/gradle && \
-    ln -sf /usr/local/gradle/bin/gradle /usr/local/bin/gradle && \
+    #curl -sL -0 https://services.gradle.org/distributions/gradle-${GRADLE_VERSION}-bin.zip -o /tmp/gradle-${GRADLE_VERSION}-bin.zip && \
+    #unzip /tmp/gradle-${GRADLE_VERSION}-bin.zip -d /usr/local/ && \
+    #rm /tmp/gradle-${GRADLE_VERSION}-bin.zip && \
+    #mv /usr/local/gradle-${GRADLE_VERSION} /usr/local/gradle && \
+    #ln -sf /usr/local/gradle/bin/gradle /usr/local/bin/gradle && \
     mkdir -p /opt/openshift && \
     mkdir -p /opt/app-root/source && chmod -R a+rwX /opt/app-root/source && \
     mkdir -p /opt/s2i/destination && chmod -R a+rwX /opt/s2i/destination && \
     mkdir -p /opt/app-root/src && chmod -R a+rwX /opt/app-root/src
 
-ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH
+#ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH
+ENV PATH=/opt/maven/bin/:$PATH
 
 
 ENV BUILDER_VERSION 1.0
