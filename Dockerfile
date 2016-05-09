@@ -10,8 +10,8 @@ ENV HTTP_PROXY $HTTP_PROXY_VALUE
 ENV HTTPS_PROXY $HTTPS_PROXY_VALUE
 RUN echo $HTTP_PROXY
 RUN echo $HTTPS_PROXY
-RUN export $HTTP_PROXY
-RUN export $HTTPS_PROXY
+RUN export http_proxy=$HTTP_PROXY
+RUN export https_proxy=$HTTPS_PROXY
 
 RUN yum repolist
 RUN yum install -y \
