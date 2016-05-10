@@ -51,6 +51,10 @@ COPY ./.sti/bin/ /usr/local/sti
 
 RUN chown -R 1001:1001 /opt/openshift
 
+RUN chmod +x /usr/local/sti/assemble
+
+RUN chmod +x /usr/local/sti/run
+
 # This default user is created in the openshift/base-centos7 image
 USER 1001
 
