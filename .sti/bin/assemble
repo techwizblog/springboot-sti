@@ -6,7 +6,7 @@
 # For more information refer to the documentation:
 #	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
 #
-
+echo 'hello 1'
 if [ "$1" = "-h" ]; then
 	# If the 'springboot-sti' assemble script is executed with '-h' flag,
 	# print the usage.
@@ -27,7 +27,7 @@ fi
 # # TODO: Add build steps for your application, eg npm install, bundle install
 
 ##############################################################################
-
+echo 'hello 2'
 # Source code provided to STI is at ${HOME}/source
 HOME=/opt/app-root/src
 LOCAL_SOURCE_DIR=${HOME}/source
